@@ -40,4 +40,27 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    let my_score = 0;
+    let cpu_score = 0;
+    function score() {
+        //return result of each round
+        //if i win add 1 to score
+        //if i lose add 1 to cpu score
+        //return results of who won
+    }
+
+
+    let my_choice1 = prompt("Choose: ");
+    playRound(my_choice1, computerPlay());
+    let my_choice2 = prompt("Choose: ");
+    playRound(my_choice2, computerPlay());
+    let my_choice3 = prompt("Choose: ");
+    playRound(my_choice3, computerPlay());
+    let my_choice4 = prompt("Choose: ");
+    playRound(my_choice4, computerPlay());
+    let my_choice5 = prompt("Choose: ");
+    playRound(my_choice5, computerPlay());
+}
+
 console.log(playRound('rOck', computerPlay()));
