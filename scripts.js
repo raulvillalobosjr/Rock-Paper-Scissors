@@ -49,7 +49,29 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+function displayResults(results) {
+    const newDiv = document.createElement('div');
+    document.getElementById('display').appendChild(newDiv);
+    newDiv.innerHTML = results;
+
+    //running score
+    const scrDiv = document.createElement('div');
+    document.getElementById('display').appendChild(scrDiv);
+    scrDiv.innerHTML = "Me: " + my_score + ", CPU: " + cpu_score;
+
+    //Annouce winner
+    if (cpu_score === 5) {
+        const cpuW = document.createElement('div');
+        document.getElementById('display').appendChild(cpuW);
+        cpuW.innerHTML = "CPU Wins!";
+    } else if (my_score === 5) {
+        const meW = document.createElement('div');
+        document.getElementById('display').appendChild(meW);
+        meW.innerHTML = "I win!";
+    }
+} 
+
+/* function game() {
     //return result of each round
     //if i win add 1 to score
     //if i lose add 1 to cpu score
@@ -76,4 +98,4 @@ function game() {
     }
 }
 
-game();
+game(); */
